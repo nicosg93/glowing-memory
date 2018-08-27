@@ -26,8 +26,14 @@
                 }
                 if (esNumero)
                 {
-                    listaEnteros.Add(int.Parse(numero));
-                    listaEnteros.Sort();
+                    int number;
+
+                    bool result = Int32.TryParse(numero, out number);
+                    if (result)
+                    {
+                        listaEnteros.Add(int.Parse(numero));
+                        listaEnteros.Sort();
+                    }
                 }
             }
         }
@@ -75,10 +81,15 @@
 
     @if (listaEnteros.Count > 0)
     {
+        <label>La Lista de Numeros es:</label>
         foreach (Numero numero in (List<Numero>)Session["listaNumeros"])
         {
-        <label>@numero.num</label>
+        <label>-(@numero.num)-</label>
         }
+    }
+    else
+    { 
+        <label>No se ingreso Ningun Numero</label>
     }
 
 
