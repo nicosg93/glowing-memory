@@ -52,7 +52,7 @@ namespace Ejercicio1
                 Console.WriteLine("El dato ingresado no es un entero intente nuevamente");
                 linea = Console.ReadLine();
                 esEntero = Int32.TryParse(linea, out numero);
-                if (!esEntero)
+                if (esEntero)
                 {
                     return int.Parse(linea);
                 }

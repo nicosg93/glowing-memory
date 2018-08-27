@@ -5,3 +5,10 @@ C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\
 C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
 C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.exe
 C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.pdb
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.exe.config
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.exe
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.pdb
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csprojAssemblyReference.cache
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.exe
+C:\Users\sagalvan\Documents\GitHub\glowing-memory\Ejercicios-Tenaris\Back_End\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.pdb
