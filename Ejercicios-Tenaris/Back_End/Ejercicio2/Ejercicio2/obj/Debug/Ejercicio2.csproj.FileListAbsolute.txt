@@ -1,0 +1,10 @@
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.exe.config
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.exe
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.pdb
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.csprojAssemblyReference.cache
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.Form1.resources
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.Properties.Resources.resources
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.csproj.GenerateResource.cache
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.csproj.CoreCompileInputs.cache
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.exe
+C:\Users\sagalvan\Desktop\Ejercicios-Tenaris\Back_End\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.pdb

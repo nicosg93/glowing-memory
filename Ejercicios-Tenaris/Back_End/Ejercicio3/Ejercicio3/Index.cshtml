@@ -1,0 +1,85 @@
+﻿@{
+    Page.Title = "Escriba el título aquí";
+    //Layout = "Su página de diseño se incluye aquí";
+    List<int> listaEnteros = new List<int>();
+    Session["listaNumeros"] = null;
+
+    if (Request["verificar"] != null)
+    {
+        string cadena = Request["numeros"];
+        Char delimitador = ',';
+        string[] cadenaDeNumeros = cadena.Split(delimitador);
+
+        foreach (var numero in cadenaDeNumeros)
+        {
+            bool esNumero = true;
+            cadena = numero.Replace(" ", "");
+
+            if (cadena != "")
+            {
+                foreach (char n in cadena)
+                {
+                    if (!"0123456789".Contains(n))
+                    {
+                        esNumero = false;
+                    }
+                }
+                if (esNumero)
+                {
+                    listaEnteros.Add(int.Parse(numero));
+                    listaEnteros.Sort();
+                }
+            }
+        }
+        List < Numero> maximos = new List<Numero>();
+
+        for (int i = 0; i < listaEnteros.Count; i++)
+        {
+            int cantidad = 1;
+            while (i < listaEnteros.Count -1 && listaEnteros[i] == listaEnteros[i + 1])
+            {
+                cantidad++;
+                i++;
+            }
+
+            Numero numero = new Numero();
+            numero.num = listaEnteros[i];
+            numero.cant = cantidad;
+
+            maximos.Add(numero);
+        }
+
+        List<Numero> numerosMaximos = new List<Numero>();
+        if (maximos.Count != 0)
+        {
+            int cantMaxima = maximos.OrderBy(i => i.cant).Last().cant;
+            foreach (Numero numero in maximos.Where(m => m.cant == cantMaxima))
+            {
+                numerosMaximos.Add(numero);
+            }
+        }
+        Session["listaNumeros"] = numerosMaximos;
+    }
+}
+
+<div>
+
+    <p>Este Programa retorna el/los maximo/s de repeticiones de numero/s en una secuencia</p>
+    <form action="/" method="post">
+
+        <label>Ingrese numeros separados por coma</label>
+        <input type="text" name="numeros" value="" />
+
+        <input type="submit" name="verificar" value="verificar" />
+    </form>
+
+    @if (listaEnteros.Count > 0)
+    {
+        foreach (Numero numero in (List<Numero>)Session["listaNumeros"])
+        {
+        <label>@numero.num</label>
+        }
+    }
+
+
+</div>
