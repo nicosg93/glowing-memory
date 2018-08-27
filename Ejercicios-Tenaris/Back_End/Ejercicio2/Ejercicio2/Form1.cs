@@ -35,8 +35,8 @@ namespace Ejercicio2
 
             for (int i = 0, j = tamaño - 1; i < tamaño && j >= 0; i++, j--)
             {
-                char letra = textBox1.Text[i];
-                char letraPosicionOpuesta = textBox1.Text[j];
+                char letra = Char.ToUpper(textBox1.Text[i]) ;
+                char letraPosicionOpuesta = Char.ToUpper(textBox1.Text[j]);
                 if (letra == ' ')
                 {
                     errorEspacioEnBlanco = 1;
