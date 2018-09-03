@@ -1,0 +1,12 @@
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\AplicacionDeServicios.dll.config
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\AplicacionDeServicios.dll
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\AplicacionDeServicios.pdb
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.dll
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.SqlServer.dll
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.xml
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.SqlServer.xml
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CoreCompileInputs.cache
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CopyComplete
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.dll
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.pdb
+C:\Users\sagalvan\source\repos\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csprojAssemblyReference.cache
