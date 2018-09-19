@@ -32,7 +32,7 @@ namespace EmpleadoConsulta.Controllers
 
             ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
-            empleados = cliente.Todos().Empleados;
+            empleados = cliente.Buscar(a).Empleados;
 
             ViewBag.lista = empleados;
 

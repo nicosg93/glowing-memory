@@ -20,6 +20,16 @@
 
 </div>
 
+@*BUSCAR*@
+<div>
+
+    <form action=@Url.Action("Buscar","Home") method="post">
+        <label>Buscar por nombre,apellido,dni</label>
+        <input type="text" name="name" value="" />
+        <input type="submit" name="button" value="Buscar" />
+    </form>
+
+</div>
 
 
 @*BUSCAR POR NOMBRE*@
@@ -73,37 +83,37 @@
 <div>
     @if (ViewBag.lista != null)
     {
-    <table border="1" id="tableUser" class="display">
-        <thead>
-            <tr>
-
-                <th>Legajo</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>DNI</th>
-                <th>Telefono</th>
-
-            </tr>
-        </thead>
-
-
-        @foreach (var item in ViewBag.lista)
-        {
-            <tbody>
+        <table border="1" id="tableUser" class="display">
+            <thead>
                 <tr>
 
-
-
-                    <td>@item.Legajo</td>
-                    <td>@item.Nombre</td>
-                    <td>@item.Apellido</td>
-                    <td>@item.DNI</td>
-                    <td>@item.Telefono</td>
+                    <th>Legajo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>DNI</th>
+                    <th>Telefono</th>
 
                 </tr>
-            </tbody>
-        }
-    </table>
+            </thead>
+
+
+            @foreach (var item in ViewBag.lista)
+            {
+                <tbody>
+                    <tr>
+
+
+
+                        <td>@item.Legajo</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Apellido</td>
+                        <td>@item.DNI</td>
+                        <td>@item.Telefono</td>
+
+                    </tr>
+                </tbody>
+            }
+        </table>
     }
     else
     {
