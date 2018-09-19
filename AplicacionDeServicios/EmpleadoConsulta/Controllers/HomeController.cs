@@ -16,9 +16,9 @@ namespace EmpleadoConsulta.Controllers
         [HttpPost]
         public ActionResult MostrarTodo()
         {
-            ServicioDeConsulta.ServicioConsultaClient cliente = new ServicioDeConsulta.ServicioConsultaClient();
-            List<AplicacionDeServicios.Empleado> empleados = new List<AplicacionDeServicios.Empleado>();
-            empleados = cliente.Todos().ToList();
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
+            List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
+            empleados = cliente.Todos().Empleados;
 
             ViewBag.lista = empleados;
 
@@ -26,10 +26,26 @@ namespace EmpleadoConsulta.Controllers
         }
 
         [HttpPost]
+        public ActionResult Buscar()
+        {
+            string a = Request["name"];
+
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
+            List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
+            empleados = cliente.Todos().Empleados;
+
+            ViewBag.lista = empleados;
+
+            return View("Index");
+        }
+
+        /*
+
+        [HttpPost]
         public ActionResult BuscarNombre()
         {
             string a = Request["name"];
-            ServicioDeConsulta.ServicioConsultaClient cliente = new ServicioDeConsulta.ServicioConsultaClient();
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.Empleado> empleados = new List<AplicacionDeServicios.Empleado>();
 
             empleados = cliente.BuscarPorNombre(Request["name"]).ToList();
@@ -47,7 +63,7 @@ namespace EmpleadoConsulta.Controllers
         public ActionResult BuscarApellido()
         {
 
-            ServicioDeConsulta.ServicioConsultaClient cliente = new ServicioDeConsulta.ServicioConsultaClient();
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
 
             List<AplicacionDeServicios.Empleado> empleados = new List<AplicacionDeServicios.Empleado>();
 
@@ -67,7 +83,7 @@ namespace EmpleadoConsulta.Controllers
         public ActionResult BuscarLegajo()
         {
 
-            ServicioDeConsulta.ServicioConsultaClient cliente = new ServicioDeConsulta.ServicioConsultaClient();
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.Empleado> empleados = new List<AplicacionDeServicios.Empleado>();
             
             /*
@@ -77,7 +93,7 @@ namespace EmpleadoConsulta.Controllers
             {
                 empleado = cliente.BuscarPorLegajo(int.Parse(Request["legajo"]));
             }
-            */
+            
 
             empleados= cliente.BuscarPorLegajo(Request["legajo"]).ToList();
 
@@ -96,7 +112,7 @@ namespace EmpleadoConsulta.Controllers
         public ActionResult BuscarDNI()
         {
 
-            ServicioDeConsulta.ServicioConsultaClient cliente = new ServicioDeConsulta.ServicioConsultaClient();
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.Empleado> empleados = new List<AplicacionDeServicios.Empleado>();
 
             empleados = cliente.BuscarPorDNI(Request["dni"]).ToList();
@@ -111,20 +127,6 @@ namespace EmpleadoConsulta.Controllers
 
             return View("Index");
         }
-
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        */
     }
 }

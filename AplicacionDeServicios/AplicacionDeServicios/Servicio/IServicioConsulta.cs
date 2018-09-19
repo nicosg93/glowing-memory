@@ -11,8 +11,9 @@ namespace AplicacionDeServicios
     [ServiceContract]
     public interface IServicioConsulta
     {
+        /*
         [OperationContract]
-        Empleado BuscarPorId(int id);
+        Response.ResponseEmpleado BuscarPorId(string id);
 
         [OperationContract]
         List<Empleado> BuscarPorNombre(string nombre);
@@ -26,7 +27,11 @@ namespace AplicacionDeServicios
         [OperationContract]
         List<Empleado> BuscarPorApellido(string apellido);
 
+        */
         [OperationContract]
-        List<Empleado> Todos();
+        Response.ResponseEmpleado Todos();
+
+        [OperationContract]
+        Response.ResponseEmpleado Buscar(string palabra);
     }
 }

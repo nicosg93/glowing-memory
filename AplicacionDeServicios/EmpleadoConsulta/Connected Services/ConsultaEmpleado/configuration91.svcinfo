@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="yV4aahDaq00B+9LQP3Z3GjmJ6qA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="M+zAnZ/Ql/sj+r/M4P6+bO7ZxS4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServicioConsulta">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IServicioConsulta" contract="ServicioDeConsulta.IServicioConsulta" bindingType="basicHttpBinding" address="http://localhost/AplicacionDeServicios/ServicioConsulta.svc" bindingConfiguration="BasicHttpBinding_IServicioConsulta">
+    <endpoint name="BasicHttpBinding_IServicioConsulta" contract="ConsultaEmpleado.IServicioConsulta" bindingType="basicHttpBinding" address="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc" bindingConfiguration="BasicHttpBinding_IServicioConsulta">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/AplicacionDeServicios/ServicioConsulta.svc</serializedValue>
+          <serializedValue>http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IServicioConsulta</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServicioDeConsulta.IServicioConsulta</serializedValue>
+          <serializedValue>ConsultaEmpleado.IServicioConsulta</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

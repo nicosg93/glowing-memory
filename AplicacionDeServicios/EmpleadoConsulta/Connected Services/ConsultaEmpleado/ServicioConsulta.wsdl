@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioConsulta" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.Response" />
+      <xs:element name="Todos">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TodosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.Response" minOccurs="0" name="TodosResult" nillable="true" type="q1:ResponseEmpleado" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Buscar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="palabra" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuscarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.Response" minOccurs="0" name="BuscarResult" nillable="true" type="q2:ResponseEmpleado" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.DTO" />
+      <xs:complexType name="ResponseEmpleado">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResponseBase">
+            <xs:sequence>
+              <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.DTO" minOccurs="0" name="Empleados" nillable="true" type="q1:ArrayOfEmpleadoDTO" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResponseEmpleado" nillable="true" type="tns:ResponseEmpleado" />
+      <xs:complexType name="ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AplicacionDeServicios.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfEmpleadoDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="EmpleadoDTO" nillable="true" type="tns:EmpleadoDTO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfEmpleadoDTO" nillable="true" type="tns:ArrayOfEmpleadoDTO" />
+      <xs:complexType name="EmpleadoDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmpleadoId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Legajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="EmpleadoDTO" nillable="true" type="tns:EmpleadoDTO" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioConsulta_Todos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Todos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_Todos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioConsulta">
+    <wsdl:operation name="Todos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/Todos" message="tns:IServicioConsulta_Todos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/TodosResponse" message="tns:IServicioConsulta_Todos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/Buscar" message="tns:IServicioConsulta_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarResponse" message="tns:IServicioConsulta_Buscar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioConsulta" type="tns:IServicioConsulta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Todos">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/Todos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioConsulta">
+    <wsdl:port name="BasicHttpBinding_IServicioConsulta" binding="tns:BasicHttpBinding_IServicioConsulta">
+      <soap:address location="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

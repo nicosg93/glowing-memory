@@ -1,4 +1,17 @@
-﻿@*MOSTRAR TODO*@
+﻿
+<link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#tableUser').DataTable();
+    });
+</script>
+
+
+@*MOSTRAR TODO*@
 <div>
 
     <form action=@Url.Action("MostrarTodo","Home") method="post">
@@ -60,18 +73,23 @@
 <div>
     @if (ViewBag.lista != null)
     {
-        <table border="1">
+    <table border="1" id="tableUser" class="display">
+        <thead>
             <tr>
+
                 <th>Legajo</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>DNI</th>
                 <th>Telefono</th>
+
             </tr>
+        </thead>
 
 
-            @foreach (var item in ViewBag.lista)
-            {
+        @foreach (var item in ViewBag.lista)
+        {
+            <tbody>
                 <tr>
 
 
@@ -83,8 +101,9 @@
                     <td>@item.Telefono</td>
 
                 </tr>
-            }
-        </table>
+            </tbody>
+        }
+    </table>
     }
     else
     {

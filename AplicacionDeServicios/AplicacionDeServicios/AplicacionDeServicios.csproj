@@ -69,49 +69,26 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
-    <Content Include="ServicioConsulta.svc" />
-    <Content Include="TablaEmpleado.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TablaEmpleado.edmx</DependentUpon>
-      <LastGenOutput>TablaEmpleado.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TablaEmpleado.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TablaEmpleado.edmx</DependentUpon>
-      <LastGenOutput>TablaEmpleado.cs</LastGenOutput>
-    </Content>
+    <Content Include="Servicio\Service1.svc" />
+    <Content Include="Servicio\ServicioConsulta.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Empleado.cs">
-      <DependentUpon>TablaEmpleado.tt</DependentUpon>
-    </Compile>
-    <Compile Include="IServicioConsulta.cs" />
-    <Compile Include="Service1.svc.cs">
+    <Compile Include="DTO\EmpleadoDTO.cs" />
+    <Compile Include="Model\Empleado.cs" />
+    <Compile Include="Model\Model1.cs" />
+    <Compile Include="Servicio\IServicioConsulta.cs" />
+    <Compile Include="Response\ResponseBase.cs" />
+    <Compile Include="Response\ResponseEmpleado.cs" />
+    <Compile Include="Servicio\Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="Servicio\IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicioConsulta.svc.cs">
+    <Compile Include="Servicio\ServicioConsulta.svc.cs">
       <DependentUpon>ServicioConsulta.svc</DependentUpon>
-    </Compile>
-    <Compile Include="TablaEmpleado.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TablaEmpleado.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TablaEmpleado.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TablaEmpleado.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TablaEmpleado.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TablaEmpleado.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,13 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <EntityDeploy Include="TablaEmpleado.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TablaEmpleado.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="TablaEmpleado.edmx.diagram">
-      <DependentUpon>TablaEmpleado.edmx</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
