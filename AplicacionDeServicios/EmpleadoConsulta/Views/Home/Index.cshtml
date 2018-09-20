@@ -1,5 +1,4 @@
-﻿
-<link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />
+﻿@*<link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />*@
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script src="~/Scripts/jquery.dataTables.min.js"></script>
 
@@ -10,32 +9,34 @@
     });
 </script>
 
+<div class="row">
 
-@*MOSTRAR TODO*@
-<div>
 
-    <form action=@Url.Action("MostrarTodo","Home") method="post">
-        <input type="submit" name="button" value="Mostrar todo" class="btn btn-primary" />
-    </form>
+    @*BUSCAR*@
+    <div class="col-md-10">
 
+        <form action=@Url.Action("Buscar","Home") method="post">
+            <label class="h3">Buscar por nombre,apellido o dni</label>
+            <input type="text" name="name" value="" class="input" />
+            <input type="submit" name="button" value="Buscar" class="btn btn-primary" />
+        </form>
+
+    </div>
+
+    @*MOSTRAR TODO*@
+    <div class="col-md-1">
+
+        <form action=@Url.Action("MostrarTodo","Home") method="post">
+            <input type="submit" name="button" value="Mostrar todo" class="btn btn-success" />
+        </form>
+
+    </div>
 </div>
-
-@*BUSCAR*@
-<div>
-
-    <form action=@Url.Action("Buscar","Home") method="post">
-        <label class="label-primary">Buscar por nombre,apellido o dni</label>
-        <input type="text" name="name" value="" class="btn btn-primary"/>
-        <input type="submit" name="button" value="Buscar" class="btn btn-primary" />
-    </form>
-
-</div>
-
 
 <div>
     @if (ViewBag.lista != null)
     {
-        <table border="1" id="Table" class="display" style="width:100%">
+        <table border="1" id="Table" class="stripe hover row-border order-column  dt-body-center dt-head-center">
             <thead>
                 <tr>
 
@@ -70,3 +71,4 @@
         @ViewBag.error
     }
 </div>
+
