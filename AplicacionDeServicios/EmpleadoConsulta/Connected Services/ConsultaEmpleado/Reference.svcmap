@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b010b939-1905-4c5d-b274-4af248461146" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="361088cd-03e3-4402-829b-3b29f3caa52d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?singleWsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioConsulta.wsdl" MetadataType="Wsdl" ID="588023c9-d23f-4dab-a8a4-530c7d364869" SourceId="1" SourceUrl="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?singleWsdl" />
+    <MetadataFile FileName="ServicioConsulta.wsdl" MetadataType="Wsdl" ID="eae2dbc2-4270-477e-9b47-8c18b1dd4c0d" SourceId="1" SourceUrl="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?wsdl" />
+    <MetadataFile FileName="ServicioConsulta.xsd" MetadataType="Schema" ID="76941ee1-cef1-48ab-89d0-476009860bef" SourceId="1" SourceUrl="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioConsulta1.xsd" MetadataType="Schema" ID="56dfb417-1c54-42b8-8749-b64ba1c32380" SourceId="1" SourceUrl="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioConsulta2.xsd" MetadataType="Schema" ID="62de1723-cf62-4583-83b9-4b801d63dac1" SourceId="1" SourceUrl="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioConsulta3.xsd" MetadataType="Schema" ID="2f380b9d-95f3-4e19-b990-343c0df284f2" SourceId="1" SourceUrl="http://localhost/AplicacionDeServicios/Servicio/ServicioConsulta.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

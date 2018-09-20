@@ -22,6 +22,8 @@ namespace EmpleadoConsulta.Controllers
 
             ViewBag.lista = empleados;
 
+            cliente.Close();
+
             return View("Index");
         }
 
@@ -35,6 +37,8 @@ namespace EmpleadoConsulta.Controllers
             empleados = cliente.Buscar(a).Empleados;
 
             ViewBag.lista = empleados;
+
+            cliente.Close();
 
             return View("Index");
         }

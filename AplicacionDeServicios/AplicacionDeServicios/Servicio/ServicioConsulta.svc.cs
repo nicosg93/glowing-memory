@@ -151,7 +151,7 @@ namespace AplicacionDeServicios
             Response.ResponseEmpleado response = new Response.ResponseEmpleado();
             try
             {
-                using (var context = new Model.Model1())
+                using (Model.Model1 context = new Model.Model1())
                 {
                     var data = context.Empleado.ToList();
 

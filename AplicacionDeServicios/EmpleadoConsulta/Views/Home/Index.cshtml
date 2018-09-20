@@ -15,7 +15,7 @@
 <div>
 
     <form action=@Url.Action("MostrarTodo","Home") method="post">
-        <input type="submit" name="button" value="Mostrar todo" />
+        <input type="submit" name="button" value="Mostrar todo" class="btn btn-primary" />
     </form>
 
 </div>
@@ -24,66 +24,18 @@
 <div>
 
     <form action=@Url.Action("Buscar","Home") method="post">
-        <label>Buscar por nombre,apellido,dni</label>
-        <input type="text" name="name" value="" />
-        <input type="submit" name="button" value="Buscar" />
+        <label class="label-primary">Buscar por nombre,apellido o dni</label>
+        <input type="text" name="name" value="" class="btn btn-primary"/>
+        <input type="submit" name="button" value="Buscar" class="btn btn-primary" />
     </form>
 
 </div>
 
-
-@*BUSCAR POR NOMBRE*@
-<div>
-
-    <form action=@Url.Action("BuscarNombre","Home") method="post">
-        <label>Buscar por nombre</label>
-        <input type="text" name="name" value="" />
-        <input type="submit" name="button" value="Buscar" />
-    </form>
-
-</div>
-
-
-@*BUSCAR POR LEGAJO*@
-<div>
-
-    <form action=@Url.Action("BuscarLegajo","Home") method="post">
-        <label>Buscar por Legajo</label>
-        <input type="text" name="legajo" value="" />
-        <input type="submit" name="button" value="Buscar" />
-    </form>
-
-</div>
-
-
-
-@*BUSCAR POR DNI*@
-<div>
-
-    <form action=@Url.Action("BuscarDNI","Home") method="post">
-        <label>Buscar por DNI</label>
-        <input type="text" name="dni" value="" />
-        <input type="submit" name="button" value="Buscar" />
-    </form>
-
-</div>
-
-
-@*MOSTRAR por apellido*@
-<div>
-
-    <form action=@Url.Action("BuscarApellido","Home") method="post">
-        <label>Buscar por apellido</label>
-        <input type="text" name="Apellido" value="" />
-        <input type="submit" name="button" value="Buscar" />
-    </form>
-
-</div>
 
 <div>
     @if (ViewBag.lista != null)
     {
-        <table border="1" id="tableUser" class="display">
+        <table border="1" id="Table" class="display" style="width:100%">
             <thead>
                 <tr>
 
@@ -96,23 +48,21 @@
                 </tr>
             </thead>
 
+            <tbody>
+                @foreach (var item in ViewBag.lista)
+                {
 
-            @foreach (var item in ViewBag.lista)
-            {
-                <tbody>
                     <tr>
-
-
 
                         <td>@item.Legajo</td>
                         <td>@item.Nombre</td>
                         <td>@item.Apellido</td>
                         <td>@item.DNI</td>
                         <td>@item.Telefono</td>
-
                     </tr>
-                </tbody>
-            }
+
+                }
+            </tbody>
         </table>
     }
     else
