@@ -20,12 +20,19 @@ namespace AplicacionDeServicios
             {
                 using (var context = new Model.Model1())
                 {
-                    var data = context.Empleado.Where
-                        (empleado => empleado.Apellido.Contains(palabra)||
+                    //Aplicando uso de linQ
+                    var data = from e in context.Empleado
+                               where e.Apellido.Contains(palabra) ||
+                                     e.DNI.ToString().Contains(palabra) ||
+                                     e.Nombre.Contains(palabra)
+                               select e;
+                    /* Aplicacion sin uso de linQ
+                     var data = context.Empleado.Where
+                            (empleado => empleado.Apellido.Contains(palabra)||
                             empleado.DNI.ToString().Contains(palabra)||
                             empleado.Nombre.Contains(palabra)).
                             ToList();
-
+                            */
                     if (data == null)
                     {
                         response.IsValid = false;
@@ -153,7 +160,10 @@ namespace AplicacionDeServicios
             {
                 using (Model.Model1 context = new Model.Model1())
                 {
-                    var data = context.Empleado.ToList();
+                    //Aplicando uso de linQ
+                    var data = from e in context.Empleado
+                               select e;
+                    //Sin uso de linQ --------> var data = context.Empleado.ToList();
 
                     if (data.Count() == 0)
                     {
