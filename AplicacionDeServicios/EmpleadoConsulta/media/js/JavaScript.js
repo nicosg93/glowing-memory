@@ -1,1 +1,3 @@
-﻿$('#Table').DataTable();
+﻿$(document).ready(function(){
+    $('#Table').DataTable();
+});

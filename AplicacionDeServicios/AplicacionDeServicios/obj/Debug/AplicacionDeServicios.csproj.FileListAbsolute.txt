@@ -34,3 +34,15 @@ C:\Users\gagonzal\Desktop\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\
 C:\Users\gagonzal\Desktop\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CopyComplete
 C:\Users\gagonzal\Desktop\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.dll
 C:\Users\gagonzal\Desktop\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.pdb
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\AplicacionDeServicios.dll.config
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\AplicacionDeServicios.dll
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\AplicacionDeServicios.pdb
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.dll
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.SqlServer.dll
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.xml
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.SqlServer.xml
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csprojAssemblyReference.cache
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CoreCompileInputs.cache
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CopyComplete
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.dll
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.pdb
