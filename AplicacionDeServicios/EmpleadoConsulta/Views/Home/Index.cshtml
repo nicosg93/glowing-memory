@@ -1,7 +1,6 @@
-﻿@**@
-
-
-
+﻿@*<link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />*@
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
 
 <div class="row">
 
@@ -18,8 +17,8 @@
     </div>
 
     @*MOSTRAR TODO*@
-    <div class="col-md-1">
-
+    <div class="col-md-1 ">
+        </br>
         <form action=@Url.Action("MostrarTodo","Home") method="post">
             <input type="submit" name="button" value="Mostrar todo" class="btn btn-success" />
         </form>
@@ -30,15 +29,15 @@
 <div>
     @if (ViewBag.lista != null)
     {
-        <table border="1" id="Table" class="stripe hover row-border order-column  dt-body-center dt-head-center">
+        <table border="1" id="Table1" class="stripe hover row-border order-column  dt-body-center dt-head-center ">
             <thead>
                 <tr>
 
-                    <th>Legajo</th>
+                    <th class="no-sort">Legajo</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>DNI</th>
-                    <th>Telefono</th>
+                    <th class="no-sort">Telefono</th>
 
                 </tr>
             </thead>
@@ -65,11 +64,4 @@
         @ViewBag.error
     }
 </div>
-<link href="~/media/css/jquery.dataTables.css" rel="stylesheet" />
-<link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />
-
-<script src="~/media/js/JavaScript.js"></script>
-<script src="~/Scripts/jquery-3.3.1.min.js"></script>
-<script src="~/Scripts/jquery.dataTables.min.js"></script>
-<script src="~/media/js/jquery.dataTables.js"></script>
 

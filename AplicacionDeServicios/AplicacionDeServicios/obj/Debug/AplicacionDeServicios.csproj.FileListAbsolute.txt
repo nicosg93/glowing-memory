@@ -41,7 +41,6 @@ C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\Aplicaci
 C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.SqlServer.dll
 C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.xml
 C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\bin\EntityFramework.SqlServer.xml
-C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csprojAssemblyReference.cache
 C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CoreCompileInputs.cache
 C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CopyComplete
 C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.dll
