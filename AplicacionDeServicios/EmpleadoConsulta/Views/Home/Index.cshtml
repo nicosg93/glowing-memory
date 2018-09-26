@@ -1,6 +1,7 @@
 ﻿@*<link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />*@
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script src="~/Scripts/jquery.dataTables.min.js"></script>
+@model IEnumerable<EmpleadoConsulta.Models.EmpleadoModel>
 
 <div class="row">
 
@@ -27,8 +28,9 @@
 </div>
 
 <div>
-    @if (ViewBag.lista != null)
+    @if (Model != null)
     {
+        
         <table border="1" id="Table1" class="stripe hover row-border order-column  dt-body-center dt-head-center ">
             <thead>
                 <tr>
@@ -43,11 +45,11 @@
             </thead>
 
             <tbody>
-                @foreach (var item in ViewBag.lista)
+                @foreach (var item in Model)
                 {
 
                     <tr>
-
+                      
                         <td>@item.Legajo</td>
                         <td>@item.Nombre</td>
                         <td>@item.Apellido</td>

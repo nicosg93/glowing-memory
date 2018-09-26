@@ -45,3 +45,4 @@ C:\Users\sagalvan\Documents\GitHub\glowing-memory\AplicacionDeServicios\Aplicaci
 C:\Users\sagalvan\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csproj.CopyComplete
 C:\Users\sagalvan\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.dll
 C:\Users\sagalvan\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.pdb
+C:\Users\gagonzal\Documents\GitHub\glowing-memory\AplicacionDeServicios\AplicacionDeServicios\obj\Debug\AplicacionDeServicios.csprojAssemblyReference.cache

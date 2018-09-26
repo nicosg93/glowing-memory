@@ -16,31 +16,44 @@ namespace EmpleadoConsulta.Controllers
         [HttpPost]
         public ActionResult MostrarTodo()
         {
+            
             ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
-            empleados = cliente.Todos().Empleados;
-
-            ViewBag.lista = empleados;
-
+            List<Models.EmpleadoModel> empleadosModel = cliente.Todos().Empleados.ConvertAll
+                       (x => new Models.EmpleadoModel
+                                       (x.EmpleadoId,
+                                       x.Legajo,
+                                       x.Nombre,
+                                       x.Apellido,
+                                       x.DNI,
+                                       x.Telefono));
             cliente.Close();
 
-            return View("Index");
+            return View("Index", empleadosModel);
         }
 
         [HttpPost]
         public ActionResult Buscar()
         {
             string a = Request["name"];
+           
+          
 
             ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
-            empleados = cliente.Buscar(a).Empleados;
 
-            ViewBag.lista = empleados;
-
+            List<Models.EmpleadoModel>  empleadosModel = cliente.Buscar(a).Empleados.ConvertAll
+            (x=> new Models.EmpleadoModel
+                            (x.EmpleadoId,
+                            x.Legajo,
+                            x.Nombre,
+                            x.Apellido,
+                            x.DNI,
+                            x.Telefono));
+            
             cliente.Close();
 
-            return View("Index");
+            return View("Index",empleadosModel);
         }
 
         /*
