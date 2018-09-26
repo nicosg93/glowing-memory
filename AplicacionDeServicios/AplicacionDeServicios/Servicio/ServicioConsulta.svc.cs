@@ -20,12 +20,21 @@ namespace AplicacionDeServicios
             {
                 using (var context = new Model.Model1())
                 {
+
                     //Aplicando uso de linQ
-                    var data = from e in context.Empleado
-                               where e.Apellido.Contains(palabra) ||
-                                     e.DNI.ToString().Contains(palabra) ||
-                                     e.Nombre.Contains(palabra)
-                               select e;
+                    
+                        var resultado = from e in context.Empleado
+                                       where e.Apellido.Contains(palabra) ||
+                                       e.DNI.ToString().Contains(palabra) ||
+                                       e.Nombre.Contains(palabra)
+                                       select e;
+                    List<DTO.EmpleadoDTO> data = resultado.ToList().ConvertAll( e => new DTO.EmpleadoDTO(
+                            e.EmpleadoId.ToString(),
+                            e.Legajo.ToString(),
+                            e.Nombre, e.Apellido,
+                            e.DNI,
+                            e.Telefono));
+
                     /* Aplicacion sin uso de linQ
                      var data = context.Empleado.Where
                             (empleado => empleado.Apellido.Contains(palabra)||
@@ -40,24 +49,9 @@ namespace AplicacionDeServicios
 
                         return response;
                     }
-                    foreach (Model.Empleado empleado in data)
+                    foreach (DTO.EmpleadoDTO empleado in data)
                     {
-                        DTO.EmpleadoDTO empleadoDTO = new DTO.EmpleadoDTO();
-                        empleadoDTO.Apellido = empleado.Apellido;
-                        empleadoDTO.DNI = empleado.DNI.ToString();
-                        empleadoDTO.Legajo = empleado.Legajo.ToString();
-                        empleadoDTO.Nombre = empleado.Nombre;
-                        empleadoDTO.Telefono = empleado.Telefono.ToString();
-
-                        /*
-                        response.Empleados[posicion].Apellido = empleado.Apellido;
-                        response.Empleados[posicion].DNI = empleado.DNI.ToString();
-                        response.Empleados[posicion].EmpleadoId = empleado.EmpleadoId.ToString();
-                        response.Empleados[posicion].Legajo = empleado.Legajo.ToString();
-                        response.Empleados[posicion].Nombre = empleado.Nombre;
-                        response.Empleados[posicion].Telefono = empleado.Telefono.ToString();
-                        */
-                        response.Empleados.Add(empleadoDTO);
+                        response.Empleados.Add(empleado);
                     }
 
                 }
@@ -160,9 +154,18 @@ namespace AplicacionDeServicios
             {
                 using (Model.Model1 context = new Model.Model1())
                 {
+                    List<DTO.EmpleadoDTO> data = context.Empleado.ToList().ConvertAll(
+                        e => new DTO.EmpleadoDTO(
+                            e.EmpleadoId.ToString(),
+                            e.Legajo.ToString(),
+                            e.Nombre,e.Apellido,
+                            e.DNI,
+                            e.Telefono));
+
                     //Aplicando uso de linQ
-                    var data = from e in context.Empleado
+                    /* var data = from e in context.Empleado
                                select e;
+                    */
                     //Sin uso de linQ --------> var data = context.Empleado.ToList();
 
                     if (data.Count() == 0)
@@ -172,16 +175,10 @@ namespace AplicacionDeServicios
 
                         return response;
                     }
-                    foreach (Model.Empleado empleado in data)
-                    {
-                        DTO.EmpleadoDTO empleadoDTO = new DTO.EmpleadoDTO();
-                        empleadoDTO.Apellido = empleado.Apellido;
-                        empleadoDTO.DNI = empleado.DNI.ToString();
-                        empleadoDTO.Legajo = empleado.Legajo.ToString();
-                        empleadoDTO.Nombre = empleado.Nombre;
-                        empleadoDTO.Telefono = empleado.Telefono.ToString();
 
-                        response.Empleados.Add(empleadoDTO);
+                    foreach (DTO.EmpleadoDTO empleado in data)
+                    {
+                        response.Empleados.Add(empleado);
                     }
 
                 }

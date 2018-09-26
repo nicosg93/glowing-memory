@@ -18,5 +18,19 @@ namespace AplicacionDeServicios.DTO
         public string DNI { get; set; }
 
         public string Telefono { get; set; }
+
+        public EmpleadoDTO()
+        {
+
+        }
+        public EmpleadoDTO(string empleadoId, string legajo, string nombre, string apellido, string dNI, string telefono)
+        {
+            EmpleadoId = empleadoId;
+            Legajo = legajo;
+            Nombre = nombre;
+            Apellido = apellido;
+            DNI = dNI;
+            Telefono = telefono;
+        }
     }
 }
