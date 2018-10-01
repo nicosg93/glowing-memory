@@ -7,7 +7,7 @@
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/Icono.css" rel="stylesheet" />
     <link href="~/media/css/jquery.dataTables.css" rel="stylesheet" />
 
 
@@ -34,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            @*<p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>*@
         </footer>
     </div>
     <script src="~/media/js/JavaScript1.js"></script>

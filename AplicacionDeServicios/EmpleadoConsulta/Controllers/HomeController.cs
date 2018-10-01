@@ -19,6 +19,7 @@ namespace EmpleadoConsulta.Controllers
             
             ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
             List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
+
             List<Models.EmpleadoModel> empleadosModel = cliente.Todos().Empleados.ConvertAll
                        (x => new Models.EmpleadoModel
                                        (x.EmpleadoId,
@@ -54,6 +55,48 @@ namespace EmpleadoConsulta.Controllers
             cliente.Close();
 
             return View("Index",empleadosModel);
+        }
+
+        [HttpPost]
+        public ActionResult NewPerson()
+        {
+            
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
+            List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
+
+           
+
+            cliente.Close();
+
+            return View("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Edit()
+        {
+            string ID = Request["ID"];
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
+            List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
+
+
+
+            cliente.Close();
+
+            return View("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Delete()
+        {
+            string ID = Request["ID"];
+            ConsultaEmpleado.ServicioConsultaClient cliente = new ConsultaEmpleado.ServicioConsultaClient();
+            List<AplicacionDeServicios.DTO.EmpleadoDTO> empleados = new List<AplicacionDeServicios.DTO.EmpleadoDTO>();
+
+
+
+            cliente.Close();
+
+            return View("Index");
         }
 
         /*

@@ -7,7 +7,7 @@
 
 
     @*BUSCAR*@
-    <div class="col-md-10">
+    <div class="col-md-8">
 
         <form action=@Url.Action("Buscar","Home") method="post">
             <label class="h3">Buscar por nombre,apellido o dni</label>
@@ -17,53 +17,82 @@
 
     </div>
 
+
     @*MOSTRAR TODO*@
     <div class="col-md-1 ">
-        </br>
+        <br />
         <form action=@Url.Action("MostrarTodo","Home") method="post">
             <input type="submit" name="button" value="Mostrar todo" class="btn btn-success" />
         </form>
 
     </div>
-</div>
-
-<div>
-    @if (Model != null)
-    {
+    <div class="col-md-1 "></div>
+    <div class="col-md-1 ">
+        <br />
+        <input type="submit" name="NewPerson" value="Agregar nueva persona" class="btn btn-success" />
         
-        <table border="1" id="Table1" class="stripe hover row-border order-column  dt-body-center dt-head-center ">
-            <thead>
-                <tr>
 
-                    <th class="no-sort">Legajo</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>DNI</th>
-                    <th class="no-sort">Telefono</th>
+    </div>
+    </div>
 
-                </tr>
-            </thead>
+    <div>
+        @if (Model != null)
+        {
 
-            <tbody>
-                @foreach (var item in Model)
-                {
-
+            <table border="1" id="Table1" class="stripe hover row-border order-column  dt-body-center dt-head-center ">
+                <thead>
                     <tr>
-                      
-                        <td>@item.Legajo</td>
-                        <td>@item.Nombre</td>
-                        <td>@item.Apellido</td>
-                        <td>@item.DNI</td>
-                        <td>@item.Telefono</td>
-                    </tr>
 
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        @ViewBag.error
-    }
-</div>
+                        <th class="no-sort">Legajo</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th class="no-sort">Telefono</th>
+                        <th class="no-sort">Modificar</th>
+                        <th class="no-sort">Eliminar</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+
+                            <td>@item.Legajo</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Apellido</td>
+                            <td>@item.DNI</td>
+                            <td>@item.Telefono</td>
+                            
+                            <td>
+                                <form action=@Url.Action("Edit","Home") method="post">
+                                    <input type="hidden" name="ID" value="@item.EmpleadoId" />
+                                    
+                                    <button type="submit" class="center-block" >
+                                        <span class="glyphicon glyphicon-pencil"></span>   
+                                    </button>
+                                </form>
+                            </td>
+
+                            <td>
+                                <input type="hidden" name="ID" value="@item.EmpleadoId" />
+                                <a href="" class="center-block ">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+
+
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            @ViewBag.error
+        }
+    </div>
 
