@@ -33,5 +33,11 @@ namespace AplicacionDeServicios
 
         [OperationContract]
         Response.ResponseEmpleado Buscar(string palabra);
+
+        [OperationContract]
+        bool Eliminar(string id);
+
+        [OperationContract]
+        bool Editar(DTO.EmpleadoDTO empleado);
     }
 }

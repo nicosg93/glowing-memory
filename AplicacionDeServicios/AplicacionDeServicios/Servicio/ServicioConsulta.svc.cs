@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -12,6 +13,53 @@ namespace AplicacionDeServicios
     public class ServicioConsulta : IServicioConsulta
     {
         //private ProyectoEntities db = new ProyectoEntities();
+        public bool Eliminar(string id)
+        {
+            try
+            {
+                using (var context = new Model.Model1())
+                {
+
+                    Model.Empleado empleadoAEliminar = context.Empleado.Find(int.Parse(id));
+
+                    context.Empleado.Remove(empleadoAEliminar);
+                    context.SaveChanges();
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool Editar( DTO.EmpleadoDTO empleado)
+        {
+            try
+            {
+                using (var context = new Model.Model1())
+                {
+
+                    Model.Empleado empleadoAEditar = new Model.Empleado();
+                    empleadoAEditar.EmpleadoId = int.Parse(empleado.EmpleadoId);
+                    empleadoAEditar.Apellido = empleado.Apellido;
+                    empleadoAEditar.DNI = empleado.DNI;
+                    empleadoAEditar.Legajo = int.Parse(empleado.Legajo);
+                    empleadoAEditar.Nombre = empleado.Nombre;
+                    empleadoAEditar.Telefono = empleadoAEditar.Telefono;
+
+                    context.Entry(empleadoAEditar).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
 
         public Response.ResponseEmpleado Buscar(string palabra)
         {
@@ -28,6 +76,8 @@ namespace AplicacionDeServicios
                                        e.DNI.ToString().Contains(palabra) ||
                                        e.Nombre.Contains(palabra)
                                        select e;
+
+                        
                     List<DTO.EmpleadoDTO> data = resultado.ToList().ConvertAll( e => new DTO.EmpleadoDTO(
                             e.EmpleadoId.ToString(),
                             e.Legajo.ToString(),
